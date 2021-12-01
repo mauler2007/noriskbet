@@ -1,0 +1,21 @@
+@import "global/reset";
+@import "global/vars";
+@import "global/mixins";
+@import "global/global";
+@import "global/fonts";
+@import "global/libs";
+
+@import "blocks/_headerSlotsBooster";
+@import "blocks/_slots";
+@import "blocks/_footer";
+@import "components/_switcherOld";
+@import "components/_img";
+@import "components/_speed";
+@import "components/_action";
+@import "components/_check";
+@import "components/_buttonEllipse";
+
+@import "blocks/_formStyle";
+@import "blocks/_intlTelInput";
+
+@import "blocks/_promo";

@@ -1,0 +1,98 @@
+.promo {
+
+  .container {}
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-left: 4vw;
+  }
+
+  &__box {}
+
+  &__title {
+    position: relative;
+    @extend %montserrat-900;
+    @include adaptiv-font(150, 42);
+    // text-shadow: 3px 10px 2px rgb(172, 52, 52);
+    text-shadow: -1px -1px 0px #0354FF,
+      -3px -3px 0px #c02929,
+      -6px -6px 0px #64c546;
+  }
+
+  &__subtitle {
+    @include adaptiv-font(114, 32);
+    @extend %montserrat-900;
+
+  }
+
+  &__cashback {
+    display: flex;
+
+    margin-bottom: 4vw;
+  }
+
+  &__get {
+    @include adaptiv-font(85, 23);
+    @extend %montserrat-700;
+
+  }
+
+  &__before {
+    @include adaptiv-font(48, 14);
+
+  }
+
+  &__num {
+    position: relative;
+
+    @include adaptiv-font(85, 23);
+    @extend %montserrat-700;
+    background-image: url('../images/arrow-back.jpg');
+    width: 127px;
+    height: 61px;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 45px;
+      height: 61px;
+      background-image: url('../images/arrow-back.jpg');
+    }
+
+    &::before {}
+
+    &::after {}
+
+  }
+
+  &__btn {
+    padding: 0.6em 1em;
+    @extend %montserrat-700;
+    @include adaptiv-font(45, 12);
+
+    color: #161615;
+    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.7);
+    border-radius: 0.2em;
+    background: linear-gradient(180deg, #FFE300 0%, #FFBB00 100%);
+    cursor: pointer;
+    transition: color 0.3s linear;
+
+    &:hover {
+      color: lighten($color: #000000, $amount: 20%);
+    }
+  }
+
+  &__image {
+    width: 55vw;
+    height: 55vw;
+  }
+
+  &__img {
+    object-fit: cover;
+    width: 100%;
+  }
+}

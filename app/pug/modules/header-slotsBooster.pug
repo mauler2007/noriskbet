@@ -1,0 +1,12 @@
+//- Пример написания миксина
+mixin navLink(link, name)
+  li 
+    a(href=link).nav-link=name
+
+block header
+  header.header
+    .header__inner
+      .header__left
+        include logo
+      .header__box
+        include langSwitch-old

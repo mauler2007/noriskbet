@@ -1,0 +1,124 @@
+html {
+  // position: relative;
+  // z-index: -2;
+  box-sizing: border-box;
+  background-blend-mode: overlay;
+
+  scroll-behavior: smooth;
+  // background-image: url(../images/page-bg.jpg);
+  background-image: url('../images/bg.jpg');
+  // background-image: -webkit-image-set(url(../images/page-bg.webp) 1x, url(../images/page-bg.webp) 1.5x, url(../images/page-bg.webp) 2x);
+  // background-image: -webkit-image-set(url(../images/page-bg.jpg) 1x, url(../images/page-bg.jpg) 1.5x, url(../images/page-bg.jpg) 2x);
+  // background-image: image-set(url(../images/page-bg.jpg) 1x, url(../images/page-bg.jpg) 1.5x, url(../images/page-bg.jpg) 2x);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  // background-color: rgba(20,20,20,1);
+
+
+  // &::after {
+  //   content: '';
+  //   top: 0;
+  //   left: 0;
+  //   position: absolute;
+  //   z-index: -1;
+  //   width: 100%;
+  //   height: 100%;
+  //   background-color: rgba(0, 0, 0, 0.6);
+  //   background-blend-mode: overlay;
+  //   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  // }
+
+  // background-blend-mode: overlay;
+  // filter: drop-shadow(0px 4px 4px rgba(130, 12, 200, 0.25));
+
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+html,
+body {
+  // height: 100%;
+}
+
+body {
+
+  @extend %betandyou;
+  // font-size: 24px;
+  line-height: 1;
+  color: $white;
+  // background-color: $black;
+  // overflow-x: hidden;
+  overflow-x: hidden;
+  // min-height: 100vh;
+
+  &.no-scroll {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+}
+
+.gradient {
+  background: linear-gradient(231deg, $yellow, $accent, $accent 100%);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  // padding: 0 60px;
+
+  @include breakpoint($mobile-bp) {
+    padding: 0 10px;
+  }
+}
+
+.wrapper__image {
+  // position: absolute;
+  // left: 0;
+  // top: 0;
+
+  // width: 100%;
+  // height: 100%;
+}
+
+.main {
+  flex: 1 0 auto;
+}
+
+footer {
+  // flex: 0 0 auto;
+  flex-shrink: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  clip-path: inset(100%);
+}

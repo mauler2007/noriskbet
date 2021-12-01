@@ -1,0 +1,132 @@
+.action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 40%;
+  margin-bottom: 20px;
+
+  @include breakpoint($mobile-bp) {
+    width: 70%;
+  }
+
+  &:nth-child(even) {
+    margin-left: auto;
+
+    @include breakpoint($mobile-bp) {
+      margin-left: 0;
+    }
+  }
+
+  // &:nth-child(1) {
+  //   span {
+  //     display: none;
+  //   }
+  // }
+
+
+
+
+  &__num {
+    display: inline-block;
+    margin-bottom: 15px;
+    text-align: center;
+
+    text-shadow: $shadow;
+    @include adaptiv-font(63, 32);
+    @extend %sarina-400;
+    line-height: 1;
+    color: $white;
+
+    &--1 {
+
+      &+.action__status span {
+        animation-duration: 2s;
+      }
+    }
+
+    &--2 {
+
+      &+.action__status span {
+        animation-duration: 1.3s;
+      }
+    }
+
+    &--3 {
+
+      &+.action__status span {
+        animation-duration: 2s;
+      }
+    }
+
+    &--4 {
+
+      &+.action__status span {
+        animation-duration: 2.5s;
+      }
+    }
+
+    &--5 {
+
+      &+.action__status span {
+        animation-duration: 1.6s;
+      }
+    }
+
+
+  }
+
+  &__status {
+    margin-bottom: 10px;
+    width: 100%;
+    height: 32px;
+
+    border: 1.4px solid #FFFFFF;
+    border-radius: 16px;
+    filter: drop-shadow(0px 0px 13.1486px rgba(255, 255, 255, 0.4));
+
+    position: relative;
+
+    span {
+      display: block;
+      height: 100%;
+      // background-color: rgb(43, 194, 83);
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+      background: linear-gradient(245.29deg, #4C25F7 15.13%, #7316E0 51.15%, #BE19FC 83.61%);
+      box-shadow: 0px 0px 13.1486px rgba(255, 255, 255, 0.4);
+      background-position: 0 0;
+      opacity: 0;
+
+      &.start-anim {
+        animation-name: moveBackground;
+        animation-timing-function: steps(100);
+        opacity: 0.5;
+      }
+
+      @keyframes moveBackground {
+        0% {
+          width: 0;
+          opacity: 0;
+          // background: linear-gradient(245.29deg, #4C25F7 15.13%, #7316E0 51.15%, #BE19FC 83.61%);
+        }
+
+        100% {
+          width: 100%;
+          opacity: 0.5;
+          background: linear-gradient(245.29deg, #4C25F7 15.13%, #7316E0 51.15%, #BE19FC 83.61%);
+          // background: linear-gradient(245.29deg, #c1bfcc 15.13%, #5d4d6e 51.15%, #48c267 83.61%);
+        }
+      }
+    }
+  }
+
+  &__text {
+    @include adaptiv-font(18, 12);
+    @extend %montserrat-600;
+    // font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: -0.05em;
+  }
+}

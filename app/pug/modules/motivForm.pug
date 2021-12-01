@@ -1,0 +1,77 @@
+block form 
+
+//-  ТАБ №1
+mixin tabGmail (active)
+  if(active)
+    a#switchGmail.switch.active.hide(href="javascript:void(0)").
+      Reg gmail
+  else
+    a#switchGmail.switch.active(href="javascript:void(0)").
+      Reg gmail
+//-  ТАБ №2
+mixin tabPhone (active)
+  if(active)
+    a#switchPhone.switch.hide(href="javascript:void(0)").
+      Reg phone
+  else
+    a#switchPhone.switch(href="javascript:void(0)").
+      Reg phone
+
+mixin formPhone (active)
+  if(active)
+    .form-element.phone-block.switchPhone
+  else
+    .form-element.phone-block.switchPhone.hide
+
+mixin formGmail (active)
+  if(active)
+    input#email.form-element.switchGmail.hide(type='email' name='email' placeholder='email')
+  else
+    input#email.form-element.switchGmail(type='email' name='email' placeholder='email')
+
+#popup-form.popup.modal
+  .popup__body  
+    .popup__close
+      .popup__close-btn
+    .popup__wrapper
+      .rezult
+      .form-tabs
+        .form-tabs__switches
+          |
+          |
+          +tabGmail(false)
+          |
+          |
+          +tabPhone(false)
+          |
+          |
+        form#tabsForm(action='/')
+          select#country.form-element(name='country')
+          select#currency.form-element(name='currency')
+            option(value='USD').
+              usd
+            option(value='EUR').
+              euro
+            option(value='UAH').
+              грн
+          +formPhone(false)
+            input#phone(type='tel' name='phone')
+            .valid-block
+              span#valid-msg.hide.
+                ✓ Valid
+              span#error-msg.hide.
+                
+          +formGmail(false)
+          button.form-element.sub-form(type='button').
+            отправить
+          .block-promo
+            label(for='')
+              input#checkPromo(name='checkPromo' type='checkbox')
+              span.
+                Have a promo code? 
+              //- |
+              //- |Have a promo code?
+            input#promo.promo(name='promo' placeholder='enter promo code' type='text')
+        a.haveAccount(href="#").
+          I have an account
+

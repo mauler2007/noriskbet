@@ -1,0 +1,181 @@
+.popup {
+  display: none;
+  place-items: center;
+  background: rgba(0, 0, 0, 0.7);
+
+
+  // height: 100vh;
+
+  &.popup-show {
+    display: grid;
+    position: fixed;
+    z-index: 11;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    // opacity: 1;
+
+    .modal__wrapper {
+      // opacity: 1;
+
+    }
+  }
+
+  &.popup--instruction {
+
+    .popup__wrapper {
+
+      @include breakpoint($mobile-bp) {
+        //  max-height: 430px;
+        // height: 560px;
+      }
+    }
+  }
+
+  &__close1 {
+    position: absolute;
+    z-index: 100;
+    right: 18px;
+    top: 5px;
+
+    height: 10px;
+    width: 30px;
+    height: 30px;
+    // box-shadow: 0px 0px 23px -2px #FFDB01;
+    cursor: pointer;
+  }
+
+  &__close-btn {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+
+    &:before,
+    &:after {
+      position: absolute;
+      left: 15px;
+      content: ' ';
+      height: 33px;
+      width: 2px;
+      background-color: #333;
+    }
+
+    &:before {
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+
+    width: 790px;
+    // height: 430px;
+    padding: 26px 37px 45px;
+
+    background-color: $black;
+    box-shadow: 0px 0px 23px -2px #FFDB01;
+    border-radius: 39.8949px;
+    border: 2px solid $accent;
+    transform: translateY(-50px);
+    // opacity: 0;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    background-image: url('../images/popup-bg.jpg');
+    background-size: cover;
+    background-position: center;
+
+    @include breakpoint($tablet-bp) {
+      width: 95%;
+    }
+
+    @include breakpoint($mobile-bp) {
+      // height: 560px;
+      padding: 20px 7px 29px;
+    }
+
+
+  }
+
+  &__name,
+  &__date {
+    text-align: center;
+  }
+
+  &__name {
+    font-size: clamp(16px, 2.5vw, 39px);
+    @extend %nunito-900;
+    line-height: 1.08;
+    background: linear-gradient(90.6deg, #FFBC00 19.97%, #FFE400 90.72%), linear-gradient(0deg, #FFFFFF, #FFFFFF);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__date {
+    margin-bottom: 16px;
+
+    @extend %betandyou;
+    font-style: normal;
+    color: #e5e5e5;
+    font-size: clamp(14px, 1.6vw, 24px);
+    line-height: 1.26;
+  }
+
+  &__frame {
+    border: 1px solid #FFFFFF;
+    border-radius: 16px;
+    padding: 13px 26px 15px 19px;
+
+    @include breakpoint($mobile-bp) {
+      padding: 7px 12px 20px 7px;
+    }
+  }
+
+  &__rules {
+    height: 238px;
+    overflow: hidden;
+    overflow-y: scroll;
+
+    @include breakpoint($mobile-bp) {
+      height: 414px;
+    }
+
+    &::-webkit-scrollbar {
+      position: relative;
+      z-index: 20;
+      width: 10px;
+      background-color: #141414;
+      opacity: 0.2;
+      border-radius: 2px;
+      width: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      position: relative;
+      z-index: 20;
+      background-color: #fff;
+    }
+
+
+  }
+
+  &__rule {
+    width: 96%;
+
+    &:not(:last-child) {
+      margin-bottom: 4px;
+    }
+
+    p {
+      @extend %betandyou;
+      font-size: clamp(14px, 1.5vw, 22px);
+      color: $white;
+      line-height: 1.35;
+    }
+  }
+}
