@@ -1,0 +1,26 @@
+.btn {
+  padding: 0.6em 1em;
+  @extend %montserrat-700;
+  @include adaptiv-font(45, 12);
+
+  color: #161615;
+  border-radius: 0.2em;
+  border: none;
+  background: linear-gradient(180deg, #FFE300 0%, #FFBB00 100%);
+  cursor: pointer;
+  transition: color 0.3s linear;
+  box-shadow: 0px 0px 37.5126px rgba($accent, 0.7);
+
+  @include breakpoint($middle-bp) {
+    display: block;
+    margin: 0 auto;
+  }
+
+  &:hover {
+    color: lighten($color: #000000, $amount: 20%);
+  }
+
+  &:active {
+    color: lighten($color: #000000, $amount: 20%);
+  }
+}
