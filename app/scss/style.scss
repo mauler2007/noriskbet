@@ -5,17 +5,23 @@
 @import "global/fonts";
 @import "global/libs";
 
-// @import "components/_switcherOld";
-// @import "components/_img";
-// @import "components/_speed";
-// @import "components/_action";
-// @import "components/_check";
-@import "components/_btn";
+// SLICK SLIDER
+@import "slick-slider/slick-theme";
+@import "slick-slider/slick";
 
+@import "blocks/slider";
+@import "blocks/terms";
+@import "blocks/_headerSlotsBooster";
+@import "blocks/_slots";
 @import "blocks/_footer";
+@import "components/_switcherOld";
+@import "components/_img";
+@import "components/_speed";
+@import "components/_action";
+@import "components/_check";
+@import "components/_buttonEllipse";
+
 @import "blocks/_formStyle";
 @import "blocks/_intlTelInput";
-@import "blocks/_popup";
 
 @import "blocks/_promo";
-@import "blocks/_instruction";

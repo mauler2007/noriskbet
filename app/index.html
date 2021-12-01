@@ -26,92 +26,74 @@
                   <p class="promo__before">до</p>
                   <p class="promo__num">10$ </p>
                 </div>
-                <button class="promo__btn btn" data-modal="popup-modal" type="button">сделать ставку</button>
+                <button class="promo__btn btn" type="button">сделать ставку</button>
               </div>
               <div class="promo__image"><img class="promo__img" src="../images/promo-img.png" alt="card"></div>
             </div>
           </div>
         </section>
-        <div class="instruction">
-          <div class="container">
-            <div class="instruction__inner">
-              <ul class="instruction__items"> 
-                <li class="instruction__number">
-                  <div class="instruction__content">
-                    <p class="instruction__num"></p>
-                    <p class="instruction__action">Войди или зарегистрируйся</p>
-                  </div>
-                </li>
-                <li class="instruction__number">
-                  <div class="instruction__content">
-                    <p class="instruction__num"></p>
-                    <p class="instruction__action">Делай ставки на точный счет</p>
-                  </div>
-                </li>
-                <li class="instruction__number">
-                  <div class="instruction__content">
-                    <p class="instruction__num"></p>
-                    <p class="instruction__action">Получи фрибет до 10$</p>
-                  </div>
-                </li>
-              </ul>
+        <section class="slider container">
+          <div class="topBg"></div>
+          <div class="title">предстоящие события</div>
+          <div class="slider__wrapp">        
+            <div class="slide"> 
+              <div class="slide__bgFilter"></div>
+              <div class="slide__bgFilter slide__bgFilter-2"></div>
+              <div class="slide__bgFilter slide__bgFilter-show"></div>
+              <div class="slide__title">02.12.2021</div>
+              <div class="slide__content"> 
+                <div class="content"><img src="../images/slider-section/Manchester.png" alt="">ман.юнайтед</div>
+                <div class="separator">vs</div>
+                <div class="content content-right"><img src="../images/slider-section/Arsenal.png" alt="">арсенал</div>
+              </div><a class="slide__link" href="#">сделать ставку  </a>
+            </div>
+            <div class="slide"> 
+              <div class="slide__bgFilter"></div>
+              <div class="slide__bgFilter slide__bgFilter-2"></div>
+              <div class="slide__bgFilter slide__bgFilter-show"></div>
+              <div class="slide__title">66.55.4444</div>
+              <div class="slide__content"> 
+                <div class="content"><img src="../images/slider-section/Manchester.png" alt="">ман.юнайтед 2</div>
+                <div class="separator">vs</div>
+                <div class="content content-right"><img src="../images/slider-section/Arsenal.png" alt="">арсенал 2</div>
+              </div><a class="slide__link" href="#">сделать ставку </a>
+            </div>
+            <div class="slide"> 
+              <div class="slide__bgFilter"></div>
+              <div class="slide__bgFilter slide__bgFilter-2"></div>
+              <div class="slide__bgFilter slide__bgFilter-show"></div>
+              <div class="slide__title">43.92.0000</div>
+              <div class="slide__content"> 
+                <div class="content"><img src="../images/slider-section/Manchester.png" alt="">ман.юнайтед 3</div>
+                <div class="separator">vs</div>
+                <div class="content content-right"><img src="../images/slider-section/Arsenal.png" alt="">арсенал 3</div>
+              </div><a class="slide__link" href="#">сделать ставку </a>
             </div>
           </div>
-        </div>
+        </section>
+        <section class="terms container">
+          <div class="absolutBg topRightBG"></div>
+          <div class="absolutBg bottomLeftBG"></div>
+          <div class="title">правила и условия</div>
+          <div class="terms__container">
+            <div class="terms__container-filter"></div>
+            <div class="terms__container-title">Акция “Фрибет”</div>
+            <ol class="terms__container-list">
+              <li>В акции принимают участие игроки, которые сделали одиночную ставку на точный счет матча.</li>
+              <li>В акции принимают участие матчи, которые были предварительно утверждены и размещены на лендинге акции.</li>
+              <li>Если ставка игрока проигрывает, он получает промокод на фрибет до 10 долларов США (сумма фрибета равняется ставке игрока, но не превышает $10).  </li>
+              <li>Фрибет отыгрывается при ставке типа экспресс из не менее 3х событий с коэффициентом не менее 1.5</li>
+              <li>В акции принимает участие только первая ставка на событие.</li>
+              <li>В акции принимают участие ставки, сделанные только на основной счет события.</li>
+              <li>В акции могут принимать участие только зарегистрированные игроки с заполненным профилем, верифицированным имейлом и номером телефона.</li>
+              <li>Для участия в акции игрок должен дать согласие на участие в бонусных акциях в Личном кабинете в настройках аккаунта.</li>
+            </ol>
+          </div>
+        </section>
       </main>
-    </div>
-    <div class="popup modal" id="popup-form">
-      <div class="popup__body"> 
-        <div class="popup__close">
-          <div class="popup__close-btn"></div>
-        </div>
-        <div class="popup__wrapper">
-          <div class="rezult"></div>
-          <div class="form-tabs">
-            <div class="form-tabs__switches">
-              
-              <a class="switch active" id="switchGmail" href="javascript:void(0)">Reg gmail</a>
-              <a class="switch" id="switchPhone" href="javascript:void(0)">
-                    Reg phone
-                    </a>
-              
-            </div>
-            <form id="tabsForm" action="/">
-              <select class="form-element" id="country" name="country"></select>
-              <select class="form-element" id="currency" name="currency">
-                <option value="USD">usd</option>
-                <option value="EUR">euro</option>
-                <option value="UAH">грн</option>
-              </select>
-                  <div class="form-element phone-block switchPhone hide"></div>
-                  <input class="form-element switchGmail" id="email" type="email" name="email" placeholder="email">
-              <button class="form-element sub-form" type="button">отправить</button>
-              <div class="block-promo">
-                <label for="">
-                  <input id="checkPromo" name="checkPromo" type="checkbox"><span>Have a promo code? </span>
-                </label>
-                <input class="promo" id="promo" name="promo" placeholder="enter promo code" type="text">
-              </div>
-            </form><a class="haveAccount" href="#">I have an account</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="popup modal" id="popup-modal">
-      <div class="popup__wrapper"><a class="popup__close" href="#"> <span class="popup__close-btn"></span></a>
-        <div class="popup__content"> 
-          <div class="popup__rule"> 
-            <p class="popup__text">
-              Для участия в акции вам необходимо <span> войти </span> или <span> зарегестрироватся</span>
-              
-            </p>
-          </div>
-          <div class="popup__buttons"><a class="btn popup__btn" href="https://betandyou.com/registration/">войти</a><a class="btn popup__btn target-btn" href="https://betandyou.com/registration/">
-              зарегестрироваться
-              </a></div>
-        </div>
-      </div>
-    </div>
+    </div><script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/slick.min.js" defer></script>
     <script src="js/main.js" defer></script>
   </body>
 </html>

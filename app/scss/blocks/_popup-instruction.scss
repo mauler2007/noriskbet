@@ -108,7 +108,7 @@
 
   &__name {
     font-size: clamp(16px, 2.5vw, 39px);
-    // @extend %nunito-900;
+    @extend %nunito-900;
     line-height: 1.08;
     background: linear-gradient(90.6deg, #FFBC00 19.97%, #FFE400 90.72%), linear-gradient(0deg, #FFFFFF, #FFFFFF);
     background-clip: border-box;
